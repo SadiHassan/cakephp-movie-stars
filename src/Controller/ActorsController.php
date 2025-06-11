@@ -8,7 +8,7 @@ class ActorsController extends AppController
     /**
      * List all actors with their movies.
      *
-     * @return \Cake\Http\Response|null Renders view
+     * @return void
      */
     public function index(): void
     {

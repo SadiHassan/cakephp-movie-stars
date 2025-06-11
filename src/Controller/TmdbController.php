@@ -23,7 +23,7 @@ class TmdbController extends AppController
         if (!$this->request->is('get')) {
             $this->set(compact('results', 'pagination'));
 
-            return null;
+            return;
         }
 
         $query = $this->request->getQuery('query');
@@ -32,7 +32,7 @@ class TmdbController extends AppController
         if (empty($query)) {
             $this->set(compact('results', 'pagination'));
 
-            return null;
+            return;
         }
 
         try {
