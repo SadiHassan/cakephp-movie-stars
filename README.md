@@ -80,3 +80,31 @@ The application should:
   - The API call should be handled on the back end
 
 _We're really just looking for clean code and general best practices here. Nothing fancy is required._
+
+---
+
+### Additional Setup to View Assignment Task
+- Run DB migrations
+
+  - `docker compose exec app bin/cake migrations migrate`
+
+- Seed the database
+
+  - `docker compose exec app bin/cake migrations seed`
+
+- Add your TMDB API Key
+
+  - Rename `.env.example` to `.env`.
+  - In `.env` file, find `TMDB_BEARER_TOKEN` and add your TMDB API Key.
+
+### Output URLs
+Database : `http://localhost/actors` 
+
+TMDB Search: `http://localhost/search`
+
+### TODO (for production readiness)
+- `Add unit tests` to ensure critical paths (like TMDb search and DB interactions) are covered.
+
+- `Implement API retry logic` (optional): While users can manually retry failed searches, a simple retry with exponential backoff would improve UX during transient errors.
+
+- `Paginate database results`: Current DB listings do not support pagination (few rows). This should be added to handle large datasets efficiently.

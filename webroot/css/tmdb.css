@@ -1,0 +1,72 @@
+.tmdb-search-form {
+    margin-bottom: 2rem;
+}
+
+.tmdb-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.tmdb-button {
+    font-size: 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.tmdb-button:hover {
+    background-color: #0056b3;
+}
+
+.tmdb-results {
+    margin-top: 2rem;
+}
+
+.results-list {
+    list-style: none;
+    padding: 0;
+}
+
+.result-item {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+}
+
+.person-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.known-for {
+    margin-top: 0.5rem;
+}
+
+.known-for-label {
+    font-style: normal;
+}
+
+.known-for-list {
+    margin: 0.5rem 0 0 1.5rem;
+    font-size: 1.5rem;
+}
+
+.known-for-list span {
+    margin: 0.5rem 0 0 1.5rem;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+}
+
+.tmdb-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 5px;
+}
+
+.no-results {
+    color: #888;
+    font-style: italic;
+}

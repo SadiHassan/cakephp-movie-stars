@@ -1,0 +1,22 @@
+<?php
+declare(strict_types=1);
+
+namespace App\Controller;
+
+class ActorsController extends AppController
+{
+    /**
+     * List all actors with their movies.
+     *
+     * @return void
+     */
+    public function index(): void
+    {
+        $actorsTable = $this->getTableLocator()->get('Actors');
+        $actors = $actorsTable->find('all', [
+            'contain' => ['Movies'],
+        ]);
+
+        $this->set(compact('actors'));
+    }
+}
