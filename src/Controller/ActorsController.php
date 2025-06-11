@@ -10,9 +10,10 @@ class ActorsController extends AppController
      *
      * @return \Cake\Http\Response|null Renders view
      */
-    public function index()
+    public function index(): void
     {
-        $actors = $this->Actors->find('all', [
+        $actorsTable = $this->getTableLocator()->get('Actors');
+        $actors = $actorsTable->find('all', [
             'contain' => ['Movies'],
         ]);
 
